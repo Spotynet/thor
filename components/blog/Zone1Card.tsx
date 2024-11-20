@@ -11,7 +11,7 @@ type Zone1CardProps = {
 const Zone1Card: React.FC<Zone1CardProps> = ({image, title, date, time}) => {
   return (
     <div className="zone1Card">
-      <Image src={image} alt={title} layout="fill" objectFit="cover" />
+      <Image src={image} alt={title} layout="fill" objectFit="cover" className="rounded-[10px]"/>
       <div className="overlay">
         <p className="title">{title}</p>
         <p className="date">{date}</p>

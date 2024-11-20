@@ -4,9 +4,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1f1f1f;
+  --foreground: #555555;
   --primary: #048eff;
-  --secondary: #868a90;
+  --secondary: #cacaca;
 }
 
 body {
@@ -35,8 +35,8 @@ body {
 
 .divider {
   width: 85%;
-  height: 2px;
-  background-color: var(--secondary);
+  height: 1px;
+  background-color: var(--foreground);
   margin-bottom: 10px;
 }
 
@@ -142,7 +142,7 @@ body {
       padding: 0;
       justify-content: space-between;
       align-items: center;
-      color: var(--background);
+      color: var(--foreground);
       width: 100%;
     }
   }
@@ -151,7 +151,6 @@ body {
 
 //BLOG
 #blog {
-  padding: 20px 25px;
 
   #zone1Wrapper {
     position: relative;
@@ -160,12 +159,14 @@ body {
     height: 500px;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 10px;
 
     .carousel {
       display: flex;
       transition: transform 0.5s ease-in-out;
       width: 100%;
       height: 100%;
+      border-radius: 10px;
     }
 
     .slide {
@@ -174,6 +175,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 10px;
     }
 
     .arrow {
@@ -227,13 +229,14 @@ body {
     width: 100%;
     height: 100%;
     background: var(--foreground);
-
+    border-radius: 10px;
     .overlay {
       position: absolute;
       top: 10px;
       left: 10px;
       color: white;
       z-index: 1;
+      border-radius: 10px;
 
       .title {
         font-size: 1.5rem;

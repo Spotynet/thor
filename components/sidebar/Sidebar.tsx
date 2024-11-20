@@ -15,16 +15,16 @@ const Sidebar: React.FC<SidebarProps> = ({menuOpen, toogleMenu}) => {
     <>
       <aside
         id="sidebar"
-        className={`min-h-svh p-0 absolute left-0 lg:relative bg-foreground z-[10] flex flex-col items-center justify-start
-      ${menuOpen ? "w-[70%] lg:w-[25%]" : "collapsed"}`}>
+        className={`min-h-svh p-0 absolute left-0 lg:relative bg-secondary z-[10] flex flex-col items-center justify-start
+      ${menuOpen ? "w-[70%] lg:w-[17%]" : "collapsed"}`}>
         <div className="flex py-[10px] items-center justify-center text-white relative w-full">
           <Link href={"/dashboard"}>
             <Image
               src={"/images/logoText.png"}
               alt="Logo"
-              width={200}
-              height={50}
-              className="w-[150px]"
+              width={220}
+              height={60}
+              className="w-[175px]"
             />
           </Link>
           <FontAwesomeIcon icon={faX} onClick={toogleMenu} className="absolute right-5 lg:hidden" />
@@ -39,6 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({menuOpen, toogleMenu}) => {
             </SiderbarCollapsible>
           </SiderbarCollapsible>
         </div>
+        <p className="absolute left-auto right-auto bottom-5 text-xs">Powered by Spotynet</p>
       </aside>
 
       {/* Backdrop */}

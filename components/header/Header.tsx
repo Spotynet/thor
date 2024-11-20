@@ -16,11 +16,17 @@ const Header: React.FC<HeaderProps> = ({toogleMenu, menuOpen}) => {
 
   return (
     <nav id="header">
-      <div
+      <div className="flex gap-[15px] items-center justify-center">      
+        <div
         className="cursor-pointer rounded-full bg-opacity-35 bg-white/20 w-[40px] h-[40px] flex items-center justify-center"
         onClick={toogleMenu}>
         <FontAwesomeIcon icon={menuOpen ? faChevronLeft : faBars} width={25} />
       </div>
+      <div className="hidden md:flex gap-[15px]">
+            <HeaderSelect selectOptions={grupos} />
+            <HeaderSelect selectOptions={entidades} />
+          </div></div>
+
       <ul>
         <li>
           <div className={`grid md:hidden icon relative`}>
@@ -40,10 +46,7 @@ const Header: React.FC<HeaderProps> = ({toogleMenu, menuOpen}) => {
             </div>
           </div>
 
-          <div className="hidden md:flex gap-[15px]">
-            <HeaderSelect selectOptions={grupos} />
-            <HeaderSelect selectOptions={entidades} />
-          </div>
+          
         </li>
         <li className="icon">
           <FontAwesomeIcon icon={faBell} width={25} />

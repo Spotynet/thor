@@ -14,7 +14,10 @@ const DashboardLayout = ({children}: {children: React.ReactNode}) => {
       <Sidebar menuOpen={menuOpen} toogleMenu={toogleMenu} />
       <main className="flex-grow">
         <Header toogleMenu={toogleMenu} menuOpen={menuOpen} />
-        {children}
+        <div className="p-5">
+          {children}
+        </div>
+        
       </main>
     </section>
   );
