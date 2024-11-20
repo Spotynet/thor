@@ -1,0 +1,387 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f1f1f;
+  --primary: #048eff;
+  --secondary: #868a90;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Poppins;
+}
+
+//Default button style
+.btn {
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 3px;
+
+  //btn Variants
+  &.btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  &.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--foreground);
+  }
+}
+
+.divider {
+  width: 85%;
+  height: 2px;
+  background-color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+//HEADER
+#header {
+  width: 100%;
+  height: auto;
+  padding-block: 10px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 25px;
+  color: var(--background);
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+
+    li {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      color: var(--background);
+      cursor: pointer;
+      height: 40px;
+      padding: 0;
+      &.icon {
+        background-color: #e6e6e635;
+        border-radius: 50%;
+        width: 40px;
+      }
+      &.userInfo {
+        display: flex;
+        gap: 5px;
+      }
+      .icon {
+        align-items: center;
+        justify-content: center;
+        color: var(--background);
+        cursor: pointer;
+        height: 40px;
+        padding: 0;
+        background-color: #e6e6e635;
+        border-radius: 50%;
+        width: 40px;
+      }
+    }
+  }
+}
+//END OF HEADER
+
+//LOGIN SECTION
+#login {
+  .gradient-bg {
+    background: linear-gradient(0, #1f1e1e 10%, #0a0a0a 95%);
+  }
+
+  #loginCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-height: 220px;
+    min-width: 250px;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+//END OF LOGIN
+
+//DASHBOARD
+#dashboard {
+  display: flex;
+  width: 100%;
+  main {
+    flex-grow: 1;
+    width: 75%;
+    max-width: 100%;
+    transition: margin-left 1s;
+  }
+}
+//END OF DASHBOARD
+
+//SIDEBAR
+#sidebar {
+  transition: width 0.5s ease-in-out;
+
+  &.collapsed {
+    width: 0;
+    overflow: hidden;
+  }
+
+  #areas {  
+    width: 85%;
+
+    .sidebarCollapsible {
+      display: flex;
+      margin: 5px 0;
+      padding: 0;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--background);
+      width: 100%;
+    }
+  }
+}
+//END OF SIDEBAR
+
+//BLOG
+#blog {
+  padding: 20px 25px;
+
+  #zone1Wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      border: none;
+      cursor: pointer;
+      color: white;
+
+      &.arrow-left {
+        left: 10px;
+      }
+      &.arrow-right {
+        right: 10px;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      right: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(50%);
+      text-align: center;
+      padding-block: 10px;
+      background: #e6e6e660;
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 4px;
+        background-color: gray;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+
+        &.active {
+          background-color: black;
+        }
+      }
+    }
+  }
+
+  .zone1Card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--foreground);
+
+    .overlay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      z-index: 1;
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .date,
+      .time {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  #zone2Wrapper {
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    .sectionTitle {
+      margin-bottom: 10px;
+    }
+
+    .cardContainer {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding-bottom: 10px;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+    }
+
+    .zone2Card {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      flex: 0 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #333;
+      color: white;
+      text-align: center;
+
+      .cardImage {
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6); // semi-transparent black background
+        color: white;
+        text-align: left;
+
+        .cardTitle {
+          font-size: 1rem;
+          font-weight: 500;
+          margin: 0;
+        }
+
+        .cardDate,
+        .cardTime {
+          font-size: 0.875rem;
+          color: #ddd;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  #zone3Wrapper {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    .cardContainer {
+      display: flex;
+      overflow-x: auto;
+      gap: 8px; // Smaller gap for smaller cards
+      padding-bottom: 10px;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+    }
+
+    .zone3Card {
+      position: relative;
+      width: 150px; // Smaller width for the card
+      height: 200px; // Smaller height for the card
+      flex: 0 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #333;
+      color: white;
+      text-align: center;
+
+      .cardImage {
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px; // Smaller padding
+        background: rgba(0, 0, 0, 0.6); // Semi-transparent black background
+        color: white;
+        text-align: left;
+
+        .cardTitle {
+          font-size: 0.875rem; // Smaller title font size
+          font-weight: 500;
+          margin: 0;
+        }
+
+        .cardDate,
+        .cardTime {
+          font-size: 0.75rem; // Smaller font size for date and time
+          color: #ddd;
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+}
