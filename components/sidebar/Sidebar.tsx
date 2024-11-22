@@ -1,10 +1,5 @@
 "use client";
-import {
-  faBlog,
-  faNewspaper,
-  faX,
-  faEarth,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBlog, faX, faEarth } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import SiderbarCollapsible from "./SiderbarCollapsible";
