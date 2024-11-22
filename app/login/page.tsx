@@ -1,4 +1,5 @@
 import LoginCard from "@/components/login/LoginCard";
+import Image from "next/image";
 
 export default function LoginPage() {
   return (
@@ -15,10 +16,17 @@ export default function LoginPage() {
       </div>
 
       {/* Right or Bottom section */}
-      <div className="h-[40%] lg:h-full w-full lg:w-[300px] gradient-bg relative flex items-center justify-center">
+      <div className="h-[40%] lg:h-full w-full lg:w-[300px] gradient-bg relative flex items-center justify-center ">
         <div className="absolute top-[-30%] lg:top-auto lg:right-[150px]">
           <LoginCard />
         </div>
+        <Image
+          className="absolute right-5 bottom-5"
+          src="/images/logo_blue.png"
+          alt="userIcon"
+          width={60}
+          height={60}
+        />
       </div>
     </section>
   );
