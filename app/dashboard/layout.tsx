@@ -4,7 +4,7 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import { useState } from "react";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(true);
   const toogleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
