@@ -1,5 +1,5 @@
-import react from "react";
-
-const ColaboradoresPage = () => {};
+const ColaboradoresPage = () => {
+  return <></>;
+};
 
 export default ColaboradoresPage;
