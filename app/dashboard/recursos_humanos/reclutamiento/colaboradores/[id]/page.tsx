@@ -535,8 +535,9 @@ const fakePeople = [
 ];
 
 const ColaboradorPage = () => {
-  let { id } = useParams();
-  const colaborador = fakePeople.find((person) => person.id == id);
+  const { id } = useParams();
+  const numericId = id ? Number(id) : undefined;
+  const colaborador = fakePeople.find((person) => person.id === numericId);
 
   const [monthsToBd, setMonthsToBd] = useState(0);
   const [monthsSinceIngreso, setMonthsSinceIngreso] = useState(0);
