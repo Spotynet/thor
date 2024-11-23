@@ -10,9 +10,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <section id="dashboard">
+    <section id="dashboard" className="flex w-full overflow-hidden h-screen">
       <Sidebar menuOpen={menuOpen} toogleMenu={toogleMenu} />
-      <main className="flex-grow">
+      <main className="flex-grow overflow-y-auto">
         <Header toogleMenu={toogleMenu} menuOpen={menuOpen} />
         <div className="p-5 mt-10">{children}</div>
       </main>
