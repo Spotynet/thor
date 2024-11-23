@@ -209,7 +209,9 @@ const ColaboradoresPage = () => {
 
   const router = useRouter();
   const navigateToDetails = (id: number) => {
-    router.push(`/colaboradores/${id}`);
+    router.push(
+      `/dashboard/recursos_humanos/reclutamiento/colaboradores/${id}`
+    );
   };
 
   return (
