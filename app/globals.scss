@@ -44,7 +44,7 @@ body {
 #header {
   position: fixed;
   z-index: 1;
-  width: 100%;
+  max-width: 100%;
   flex-grow: 1;
   height: auto;
   padding-block: 10px;
@@ -55,6 +55,12 @@ body {
   padding-inline: 25px;
   color: var(--background);
   transition: width 0.5s ease-in-out;
+
+  @media (min-width: 1024px) {
+    .lg\:w-\[83\%\] {
+      width: 83%;
+    }
+  }
 
   ul {
     list-style: none;

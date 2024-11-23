@@ -1,5 +1,7 @@
 "use client";
+
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
@@ -205,6 +207,11 @@ const ColaboradoresPage = () => {
       person.cargo.toLowerCase().includes(filters.cargo.toLowerCase())
   );
 
+  const router = useRouter();
+  const navigateToDetails = (id: number) => {
+    router.push(`/colaboradores/${id}`);
+  };
+
   return (
     <div className="p-6 mt-4">
       {/* <h1 className="text-3xl font-extrabold text-foreground mb-2 text-center">
@@ -301,6 +308,7 @@ const ColaboradoresPage = () => {
                     icon={faEye}
                     className="text-gray-600 hover:text-blue-500 cursor-pointer transition-colors"
                     title="Ver detalles"
+                    onClick={() => navigateToDetails(person.id)}
                   />
                 </td>
               </tr>

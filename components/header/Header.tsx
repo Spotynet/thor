@@ -23,7 +23,10 @@ const Header: React.FC<HeaderProps> = ({ toogleMenu, menuOpen }) => {
   const router = useRouter();
 
   return (
-    <nav id="header">
+    <nav
+      id="header"
+      className={`w-full ${menuOpen ? "lg:w-[83%]" : "lg:w-full"}`}
+    >
       <div className="flex gap-[15px] items-center justify-center">
         <div
           className="cursor-pointer rounded-full bg-opacity-35 bg-white/20 w-[40px] h-[40px] flex items-center justify-center"
