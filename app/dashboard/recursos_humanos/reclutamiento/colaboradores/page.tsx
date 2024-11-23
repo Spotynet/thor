@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 const fakePeople = [
   {
@@ -13,8 +14,8 @@ const fakePeople = [
   },
   {
     id: 2,
-    nombre: "Maria Lopez",
-    email: "maria.lopez@example.com",
+    nombre: "Julia Lopez",
+    email: "Julia.lopez@example.com",
     area: "Marketing",
     cargo: "Analista",
   },
@@ -181,7 +182,6 @@ const fakePeople = [
   },
 ];
 
-
 const ColaboradoresPage = () => {
   const [filters, setFilters] = useState({
     nombre: "",
@@ -206,27 +206,27 @@ const ColaboradoresPage = () => {
   );
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+    <div className="p-6 mt-4">
+      {/* <h1 className="text-3xl font-extrabold text-foreground mb-2 text-center">
         Lista de Colaboradores
-      </h1>
-      <div className="overflow-x-auto bg-gradient-to-br from-gray-100 to-white p-6 rounded shadow-lg">
+      </h1> */}
+      <div className="overflow-x-auto bg-white p-6 rounded shadow-lg">
         <table className="table-auto w-full border-collapse rounded overflow-hidden drop-shadow-lg">
           <thead>
-            <tr className="bg-primary text-white">
-              <th className="px-6 py-3 text-left text-sm font-medium uppercase">
+            <tr className="bg-white text-foreground ">
+              <th className="px-6 py-3 text-left text-sm font-semibold uppercase">
                 Nombre
               </th>
-              <th className="px-6 py-3 text-left text-sm font-medium uppercase">
+              <th className="px-6 py-3 text-left text-sm font-semibold uppercase">
                 Email
               </th>
-              <th className="px-6 py-3 text-left text-sm font-medium uppercase">
+              <th className="px-6 py-3 text-left text-sm font-semibold uppercase">
                 Área
               </th>
-              <th className="px-6 py-3 text-left text-sm font-medium uppercase">
+              <th className="px-6 py-3 text-left text-sm font-semibold uppercase">
                 Cargo
               </th>
-              <th className="px-6 py-3 text-center text-sm font-medium uppercase">
+              <th className="px-6 py-3 text-center text-sm font-semibold uppercase">
                 Detalles
               </th>
             </tr>
@@ -278,7 +278,13 @@ const ColaboradoresPage = () => {
                   index % 2 === 0 ? "bg-white" : "bg-gray-100"
                 } hover:bg-gray-200 transition-colors`}
               >
-                <td className="px-6 py-4 text-sm font-medium text-gray-800">
+                <td className="px-6 py-4 text-sm font-medium text-gray-800 flex items-center justify-start gap-2">
+                  <Image
+                    src={"/images/userIcon.png"}
+                    width={30}
+                    height={30}
+                    alt="ProfilePic"
+                  />
                   {person.nombre}
                 </td>
                 <td className="px-6 py-4 text-sm text-gray-600">

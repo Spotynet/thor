@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #555555;
+  --background: #dbdbdb;
+  --foreground: #3f3f3f;
   --primary: #048eff;
   --secondary: #cacaca;
 }
@@ -42,7 +42,10 @@ body {
 
 //HEADER
 #header {
+  position: fixed;
+  z-index: 1;
   width: 100%;
+  flex-grow: 1;
   height: auto;
   padding-block: 10px;
   background-color: var(--primary);
@@ -51,6 +54,7 @@ body {
   align-items: center;
   padding-inline: 25px;
   color: var(--background);
+  transition: width 0.5s ease-in-out;
 
   ul {
     list-style: none;
@@ -151,6 +155,7 @@ body {
 
 //BLOG
 #blog {
+  padding: 25px 15px;
   #zone1Wrapper {
     position: relative;
     width: 100%;
