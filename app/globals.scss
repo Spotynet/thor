@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 :root {
+<<<<<<< HEAD
   --background: #dbdbdb;
   --foreground: #3f3f3f;
+=======
+  --background: #ffffff;
+  --foreground: #555555;
+>>>>>>> 66ef66e249fac2124b93adf0e903de9264f4525c
   --primary: #048eff;
   --secondary: #cacaca;
 }
@@ -42,10 +47,14 @@ body {
 
 //HEADER
 #header {
+<<<<<<< HEAD
   position: fixed;
   z-index: 1;
   max-width: 100%;
   flex-grow: 1;
+=======
+  width: 100%;
+>>>>>>> 66ef66e249fac2124b93adf0e903de9264f4525c
   height: auto;
   padding-block: 10px;
   background-color: var(--primary);
@@ -54,6 +63,7 @@ body {
   align-items: center;
   padding-inline: 25px;
   color: var(--background);
+<<<<<<< HEAD
   transition: width 0.5s ease-in-out;
 
   @media (min-width: 1024px) {
@@ -61,6 +71,8 @@ body {
       width: 83%;
     }
   }
+=======
+>>>>>>> 66ef66e249fac2124b93adf0e903de9264f4525c
 
   ul {
     list-style: none;
@@ -143,12 +155,20 @@ body {
     overflow: hidden;
   }
 
+<<<<<<< HEAD
   #areas {
+=======
+  #areas {  
+>>>>>>> 66ef66e249fac2124b93adf0e903de9264f4525c
     width: 85%;
 
     .sidebarCollapsible {
       display: flex;
+<<<<<<< HEAD
       margin: 10px 0;
+=======
+      margin: 5px 0;
+>>>>>>> 66ef66e249fac2124b93adf0e903de9264f4525c
       padding: 0;
       justify-content: space-between;
       align-items: center;
@@ -161,7 +181,11 @@ body {
 
 //BLOG
 #blog {
+<<<<<<< HEAD
   padding: 25px 15px;
+=======
+
+>>>>>>> 66ef66e249fac2124b93adf0e903de9264f4525c
   #zone1Wrapper {
     position: relative;
     width: 100%;

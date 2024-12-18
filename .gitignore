@@ -24,7 +24,10 @@
 .DS_Store
 *.pem
 /branding
+<<<<<<< HEAD
 /marca
+=======
+>>>>>>> 66ef66e249fac2124b93adf0e903de9264f4525c
 
 # debug
 npm-debug.log*
