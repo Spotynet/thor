@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const fakePeople = [
   {
@@ -550,7 +551,7 @@ const ColaboradorPage = () => {
       const today = new Date();
 
       // Set the next birthday's year to the current year
-      let nextBirthday = new Date(birthDate);
+      const nextBirthday = new Date(birthDate);
       nextBirthday.setFullYear(today.getFullYear());
 
       // If the birthday already passed this year, set nextBirthday to next year
@@ -589,10 +590,12 @@ const ColaboradorPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-6">
         {/* Image & Full Name Card */}
         <div className="col-span-1 flex flex-col items-center bg-white p-4 shadow-md rounded-lg">
-          <img
+          <Image
             src={"/images/userIcon.png"}
             alt="Profile Picture"
             className="w-24 h-24 rounded-full mb-4"
+            width={24}
+            height={24}
           />
           <h2 className="text-xl font-semibold">
             {colaborador.nombre} {colaborador.apellidos}
